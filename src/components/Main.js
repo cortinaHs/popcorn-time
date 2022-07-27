@@ -1,21 +1,10 @@
 import './Main.css'
-import moviesData from '../data/movies-data.json';
-import { useState } from 'react';
 import { Movie } from './Movie';
+import { useState } from 'react';
 
-export const Main = () => {
-
-    const [movies, setMovies] = useState(moviesData);
+export const Main = ({movies, clickToDelete}) => {
 
     const [showMovies, setShowMovies] = useState(true);
-
-    const deleteMovie = movieId => {
-        setMovies( (prevMovies) => {
-
-        return prevMovies.filter(element => element.id !== movieId);
-
-        });
-    }
 
     const toggleShowMovies = () => {
         setShowMovies(!showMovies);
@@ -27,21 +16,10 @@ export const Main = () => {
     //     }
     // })
 
-    let message;
-
-    if(movies.length > 0) {
-        message = <h2>There's {movies.length} movies in our DB</h2>;
-    } else {
-        message = <h2>No movies.... 😔</h2>
-    }
-
 
     return (
         <div className="Main">
-
-            {message}
-
-            
+        
             <button onClick={toggleShowMovies}>{showMovies ? 'Hide' : 'Show'}</button>
 
             <section className='movies'>
@@ -51,7 +29,7 @@ export const Main = () => {
 
                     let props = {
                         movie: movie, 
-                        clickToDelete: deleteMovie
+                        clickToDelete: clickToDelete
                     }
 
                     return (

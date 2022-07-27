@@ -1,8 +1,6 @@
 import './Main.css'
 
-export const Movie = (props) => {
-
-    const { movie, clickToDelete } = props;
+export const Movie = ({ movie, clickToDelete }) => {
 
     return (
         <div className="movie">
