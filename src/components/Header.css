@@ -1,8 +1,29 @@
-.Header {
-    background-color: rgb(179, 204, 216);
-    padding: 1rem;
-    margin: 1rem;
-}
 .Header h1 {
-    color: rgb(0, 107, 161);
+    color: rgb(255, 172, 51);
+    position: absolute;
+    left: 140px;
+    top: 8px;
+}
+
+.Header img {
+    width: 80px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+.Header h2{
+    color: rgb(255, 172, 51);
+    position: absolute;
+    left: 140px;
+    top: 50px;
+}
+
+.Header {
+    height: 150px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
 }

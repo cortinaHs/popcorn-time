@@ -41,20 +41,23 @@ button:hover {
   background-color: #f7fafa;
 }
 
-button:focus {
-  border-color: #008296;
-  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
-  outline: 0;
-}
-
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.movie .whitespace {
+.movie .whitespace, 
+.movie img {
   height: 268px;
   width: 182px;
   display: block;
+}
+
+.alternativeContent img{
+  height: 20vw;
+}
+
+.alternativeContent{
+  margin: 100px;
 }
